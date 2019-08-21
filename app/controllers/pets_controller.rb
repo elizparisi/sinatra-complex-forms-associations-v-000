@@ -9,7 +9,7 @@ class PetsController < ApplicationController
     erb :'/pets/new'
   end
 
-  post '/pets' do 
+  post '/pets/new' do 
     @pet = Pet.create(params[:pet])
     
     if !params["owner"]["name"].empty?
